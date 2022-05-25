@@ -6,7 +6,8 @@ const browserSync  = require('browser-sync').create();
 const uglify       = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin     = import('gulp-imagemin');
-const del          = require('del')
+const del          = require('del');
+
 
 
 function browsersync(){
@@ -41,6 +42,7 @@ function scripts(){
     return src([
         'node_modules/jquery/dist/jquery.js',
         'node_modules/slick-carousel/slick/slick.js',
+        'node_modules/mixitup/dist/mixitup.js',
         'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))
